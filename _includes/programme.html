@@ -1,0 +1,70 @@
+{% assign table_headers = "Title,Timings,Speakers,Description" | split: "," %}
+<div class="accordion container-fluid" id="programmeAccordion">
+{% assign days = site.data.schedule %}
+{%- for day in site.data.schedule %}
+{% comment %}
+<script>jekyllDebug("day", "{{ day | jsonify | uri_escape }}")</script>
+{% endcomment %}
+<div class="accordion-item day-programme day-{{day.id}}">
+        <h2 class="accordion-header">
+            <button class="d-flex accordion-button collapsed" type="button" data-bs-toggle="collapse" 
+                    data-bs-target="#{{day.id}}-programme" aria-expanded="false" aria-controls="{{day.id}}-programme">
+                <div class="day-title d-flex flex-column flex-md-row justify-content-start">
+                    <div class="d-flex p-2 mx-5">{{ day.date }}</div>
+                    <div class="d-flex mx-5 p-2">{{ day.title }}</div>
+                </div>
+            </button>
+        </h2>
+        <div id="{{day.id}}-programme" class="accordion-collapse collapse" data-bs-parent="#programmeAccordion">
+            <div class="programme-entry accordion-body d-flex flex-column justify-content-between align-items-center">
+                {%- for event in day.events %}
+                <div class="d-flex container flex-column flex-md-row justify-content-between align-items-between">
+                    <div class="p-2">{{event.timings}}</div>
+                    <div class="p-2">{{event.title}}</div>
+                    <div class="p-2">
+                        {% if event.speakers %}
+                        <ul>
+                        {% for speaker in event.speakers %}
+                            {% assign speakerObj = site.data.speakers | where: "id", speaker | first %}
+                            <li><a href="{{ '/speakers/#speakers-grid' | relative_url }}">{{speakerObj.name}}</a></li>
+                        {% endfor %}
+                        </ul>
+                        {% endif %}
+                    </div>
+                    <div class="p-2">{{event.description}}</div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+{% endfor %}
+</div> <!-- accordion -->
+
+{% comment %}
+<h3 id="{{key}}">{{ day.date }}</h3>
+<table class="table table-dark table-striped table-bordered">
+    <thead>
+        <tr>
+            {% for header in table_headers %}
+            <th scope="col">{{ header }}</th>
+            {% endfor %}
+        </tr>
+    </thead>
+    <tbody class="table-group-divider">
+    {% for event in group.items  %}
+    <tr>
+        <td>{{ event.title }}</td>
+        <td>{{ event.timings }}</td>
+        <td>
+            {% for speaker in event.speakers %}
+                    <script>jekyllDebug("speaker:", "{{ speaker | jsonify | uri_escape }}")</script>
+                {% assign speakerObj = site.data.speakers | where: "id", speaker | first %}
+                <a href="{{ '/speakers/#' | append: speaker | relative_url }}">{{speakerObj.name}}</a>
+            {% endfor %}
+        </td>
+        <td>{{ event.description }}</td>
+    </tr>
+    {% endfor %}
+    </tbody>
+</table>
+{% endcomment %}

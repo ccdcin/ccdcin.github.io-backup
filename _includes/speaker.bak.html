@@ -1,0 +1,21 @@
+<div class="card mb-3" style="max-width: 540px;">
+        <script>jekyllDebug("mod", "{{ mod | jsonify | uri_escape }}")</script>
+    <div class="row g-0">
+        {% if mod == 0 %}
+        <div class="col-md-4">
+            <img class="img-thumbnail rounded" src="{{ '/assets/img/speakers/' | append: speaker.pic | relative_url }}">
+        </div>
+        {% endif %}
+        <div class="col-md-8">
+            <div class="card-body">
+                <h5 id="{{ speaker.id }}" class="card-title">{{ speaker.name }}</h5>
+                <div class="card-text">{{ speaker.bio }}</div>
+            </div>
+        </div>
+        {% if mod == 1 %}
+        <div class="col-md-4">
+            <img class="img-thumbnail rounded" src="{{ '/assets/img/speakers/' | append: speaker.pic | relative_url }}">
+        </div>
+        {% endif %}
+    </div>
+</div>

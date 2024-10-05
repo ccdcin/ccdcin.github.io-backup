@@ -1,0 +1,39 @@
+- id: 1
+  date: December 13th
+  title: Let's Play and Introduction to TO
+  events:
+    - title: Conference Warmup Session
+      timings: 10am-1pm
+      speakers:
+        - arun
+        - aditi
+      description: >-
+        This is the warmup session for the conference
+
+    - title: Panel Discussion on Mental Health
+      timings: 2pm-4pm
+      speakers:
+        - maitri
+      description: >-
+        This is the description
+
+- id: 2
+  date: December 14th
+  title: Conference Day 1
+  events:
+    - title: Forum Theater performance
+      timings: 10am-12pm
+      speakers:
+        - theater_group
+      description: >-
+        This theater group will perform a TO Forum Theater
+
+- id: 3
+  date: December 15th
+  title: Conference Day 2
+  events:
+    - title: Live discussion on marginalized
+      timings: 10am-1pm
+      speakers:
+        - arun
+        - aditi

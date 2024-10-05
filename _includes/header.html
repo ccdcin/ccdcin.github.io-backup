@@ -1,25 +1,38 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-  <div class="container">
-    <a class="navbar-brand" rel="author" href="{{ "/" | relative_url }}">{{ site.title | escape }}</a>
+<header class="header-font sticky-top container-fluid">
+    <nav class="navbar navbar-expand-lg bg-white row">
+      <div class="d-flex justify-content-center col-12">
+          <a id="logo-nav" class="navbar-brand d-none" rel="author" href="{{ "/" | relative_url }}">
+              <img width="160px" src="{{ '/assets/img/dd_logo.png' | relative_url }}">
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapseMenu" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse flex-fill" id="navbarCollapseMenu">
+          <ul class="navbar-nav ms-md-auto">
+              <li id="register-nav" class="nav-item rounded d-none">
+                <a class="nav-link" href="{{ site.registration_link }}">Register</a>
+              </li>
+              <li class="nav-item rounded">
+                  <a class="nav-link" href="{{ '/#programme' | relative_url}}">Programme</a>
+              </li>
+              <li class="nav-item rounded">
+                  <a class="nav-link" href="{{ '/speakers/' | relative_url }}">Speakers</a>
+              </li>
+              <li class="nav-item rounded">
+                  <a class="nav-link" href="{{ '/#about' | relative_url}}">About</a>
+              </li>
+              <li class="nav-item rounded">
+                  <a class="nav-link" href="{{ '/#donate' | relative_url }}">Donate</a>
+              </li>
+              {% if site.debug %}
+              <li id="debug-toggle" class="nav-item hide rounded" 
+                  data-bs-toggle="modal" data-bs-target="#debug-console" data-bs-whatever="somedata">
+                <i class="fa-regular fa-eye"></i>
+              </li>
+              {% endif %}
+          </ul>
+        </div>
+      </div>
+    </nav>
+</header>
 
-    {%- assign page_paths = site.header_pages -%}
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav ms-md-auto">
-        {%- for path in page_paths -%}
-          {%- assign my_page = site.pages | where: "path", path | first -%}
-          {%- if my_page.title -%}
-          <li class="nav-item">
-            <a class="nav-link" href="{{ my_page.url | relative_url }}">{{ my_page.title | escape }}</a>
-          </li>
-          {%- endif -%}
-        {% endfor -%}
-        <li class="nav-item">
-          <a class="nav-link" href="{{ site.github.repository_url }}">Fork me on Github</a>
-        </li>
-      </ul>
-    </div>
-  </div>
-</nav>

@@ -1,99 +1,59 @@
-// This is the place to place Bootstrap-related CSS customizations.
-// As example you can start by importing the _bootswatch.scss file from one of the
-// theme provided by https://bootswatch.com .
-// Minty 5.3.3
+// Darkly 5.3.3
 // Bootswatch
 
 
 // Variables
 
-$web-font-path: "https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" !default;
+$web-font-path: "https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400&display=swap" !default;
 @if $web-font-path {
   @import url("#{$web-font-path}");
 }
 
-// Navbar
+// Typography
 
-.navbar {
-  font-family: $headings-font-family;
-}
-
-// Buttons
-
-.btn {
-  font-family: $headings-font-family;
-
-  &,
-  &:hover {
-    color: $white;
-  }
-
-  &-light,
-  &-light:hover {
-    color: $gray-700;
-  }
-
-  &-link,
-  &-link:hover {
-    color: $primary;
-  }
-
-  &-link.disabled:hover {
+.blockquote {
+  &-footer {
     color: $gray-600;
-  }
-
-  &-outline-primary {
-    color: $primary;
-  }
-
-  &-outline-secondary {
-    color: $secondary;
-  }
-
-  &-outline-success {
-    color: $success;
-  }
-
-  &-outline-info {
-    color: $info;
-  }
-
-  &-outline-warning {
-    color: $warning;
-  }
-
-  &-outline-danger {
-    color: $danger;
-  }
-
-  &-outline-dark {
-    color: $dark;
-  }
-
-  &-outline-light {
-    color: $light;
   }
 }
 
 // Forms
 
-legend {
-  font-family: $headings-font-family;
+@include color-mode(dark) {
+  .input-group-text {
+    // color: $white;
+  }
+}
+
+.form-floating {
+  > label,
+  > .form-control:focus ~ label,
+  > .form-control:not(:placeholder-shown) ~ label {
+    color: $input-placeholder-color;
+  }
 }
 
 // Navs
 
-.dropdown-menu {
-  font-family: $font-family-sans-serif;
+.nav-tabs,
+.nav-pills {
+  .nav-link,
+  .nav-link.active,
+  .nav-link.active:focus,
+  .nav-link.active:hover,
+  .nav-item.open .nav-link,
+  .nav-item.open .nav-link:focus,
+  .nav-item.open .nav-link:hover {
+    color: $white;
+  }
 }
 
-.breadcrumb {
-  a {
-    color: $navbar-dark-color;
-  }
+.breadcrumb a {
+  color: $white;
+}
 
+.pagination {
   a:hover {
-    color: $white;
     text-decoration: none;
   }
 }
@@ -101,39 +61,27 @@ legend {
 // Indicators
 
 .alert {
+  color: $white;
+  border: none;
+
   a,
   .alert-link {
     color: $white;
+    text-decoration: underline;
   }
 
-  &-light {
-
-    &,
-    a:not(.btn),
-    .alert-link {
-      color: $body-color;
+  @each $color, $value in $theme-colors {
+    &-#{$color} {
+      @if $enable-gradients {
+        background: $value linear-gradient(180deg, mix($white, $value, 15%), $value) repeat-x;
+      } @else {
+        background-color: $value;
+      }
     }
   }
 }
 
-.badge {
-  color: $white;
-
-  &.bg-light {
-    color: $gray-700;
-  }
-}
-
-// Containers
-
-.card,
-.list-group-item {
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    color: inherit;
-  }
+.tooltip {
+  --bs-tooltip-bg: var(--bs-tertiary-bg);
+  --bs-tooltip-color: var(--bs-emphasis-color);
 }

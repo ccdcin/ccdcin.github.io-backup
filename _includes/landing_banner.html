@@ -1,0 +1,33 @@
+<div class="row landing-upper">
+    <div class="col-md-6">
+        <div class="d-flex flex-column justify-content-end">
+            <div class="dd-landing d-flex">
+                <img src="{{ '/assets/img/dd_logo.png' | relative_url }}" width="700em">
+            </div>
+            <div class="landing-byline d-flex justify-content-center">
+                Theater of the Oppressed for our times 
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <img src="{{ '/assets/img/landing_banner.png' | relative_url }}">
+    </div>
+</div>
+<div class="row landing-lower d-flex justify-content-center align-items-center">
+    <div class="col-md-6">
+        <div class="row">
+            <div class="dates">
+                {{ site.conference_dates | escape }}
+            </div>
+        </div>
+        <div class="row">
+            <div class="venue">
+                {{ site.venue | escape }} <br/>
+                Bangalore
+            </div>
+        </div> 
+    </div>
+    <div class="col-md-6 registration-div d-flex justify-content-center align-items-center">
+        <a href="{{ site.registration_link }}" class="btn btn-warning registration-link">Register Here</a>
+    </div>
+</div>

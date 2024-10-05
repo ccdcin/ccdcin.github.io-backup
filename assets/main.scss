@@ -2,8 +2,267 @@
 # Only the main Sass file needs front matter (the dashes are enough)
 ---
 
+@font-face {
+    font-family: "Avion Black";
+    src: url("../assets/fonts/Avion/Avion-Black.otf");
+}
+
+@font-face {
+    font-family: "Avion Bold";
+    src: url("../assets/fonts/Avion/Avion-Bold.otf");
+}
+
+@font-face {
+    font-family: "Avion Regular";
+    src: url("../assets/fonts/Avion/Avion-Regular.otf");
+}
+
+
+$enable-dark-mode: false;
+$red: #ef4625;
+$green: #16b491;
+$blue: #253778;
+$yellow: #fbbb10;
+$gray-200: #e2e2e2;
+$container-padding-x: 0;
+
+$font-family-base: "Avion Regular";
+$display-font-family: "Avion Black";
+$btn-font-family: "Avion Bold";
+
+$accordion-icon-width: 1.5em;
+$accordion-color: $blue;
+$accordion-button-active-color: $blue;
+$accordion-button-color: $blue;
+
+$accordion-button-icon: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' class='bi bi-plus' viewBox='0 0 16 16'><path d='M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4'/></svg>");
+
+$accordion-button-active-icon: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' class='bi bi-dash' viewBox='0 0 16 16'> <path d='M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8'/></svg>"); 
+
+
 @import "variables";
 @import "bootstrap/bootstrap";
 @import "syntax-highlighting";
 @import "bootstrap-4-jekyll/bootstrap-4-jekyll";
 @import "bootstrap_customization";
+@import "fontawesome/fontawesome";
+@import "fontawesome/brands";
+@import "fontawesome/solid";
+
+:root{
+    --bs-light-rgb: var(--bs-white);
+    //--bs-accordion-btn-icon: #{escape-svg($accordion-button-icon)};
+    //--bs-accordion-btn-active-icon: #{escape-svg($accordion-button-active-icon)};
+}
+
+#debug-toggle {
+    color: black;
+}
+
+.hide {
+    visibility: hidden;
+}
+
+#debug-console {
+    position: fixed;
+    top: 50px;
+    left: 0;
+    bottom: 0;
+    overflow-y: auto;
+    opacity: 0.95;
+    background-color: black;
+    color: white;
+}
+
+#close {
+    float: right;
+    width: 30px;
+    height: 20px;
+}
+
+@font-face {
+    font-family: Airplanes;
+    src: url("../assets/fonts/airplanes.ttf");
+}
+
+@font-face {
+    font-family: akku;
+    src: url("../assets/fonts/akku.ttf");
+}
+
+.header-font {
+    font-family: "Avion Bold";
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.bg-white {
+    background-color: white;
+    opacity: 1;
+    color: black;
+}
+
+.bg-gray {
+    background-color: $gray-custom;
+    opacity: 1;
+    color: $gray-900;
+}
+
+.nav-item {
+    background-color: $green;
+    color: $blue;
+    margin-left: 3em;
+    padding-left: 1em;
+    padding-right: 1em;
+    font-size: 16px;
+
+    .nav-link {
+        text-transform: uppercase;
+    }
+}
+
+.landing-byline {
+    background-color: $blue;
+    color: $white;
+    font-size: 2rem;
+    font-weight: bold;
+    padding-left: 1.4rem;
+}
+
+.dd-landing {
+    margin-top: 10rem;
+}
+
+.dates {
+    color: $green;
+    font-size: 2.8rem;
+    font-weight: 400;
+}
+
+.venue {
+    color: $blue;
+    font-size: 2.8rem;
+    padding-left: 1rem;
+    font-weight: 300;
+}
+
+// .registration-div {
+//     margin-left: 0.1em;
+//     padding-top: 0.1em;
+
+//     .registration-link {
+//         padding-left: 2px;
+//         padding-right: 2px;
+//     }
+// }
+.registration-div {
+    height: 1rem;
+
+    .registration-link {
+        font-size: 1.5rem;
+        text-transform: uppercase;
+    }
+}
+
+.landing-upper {
+    margin-top: 1rem;
+}
+
+.landing-lower {
+    margin-top: 1.5rem;
+    margin-bottom: 6.5rem;
+}
+
+// .accordion-button::after {
+//     background-image: #{escape-svg($accordion-button-icon)} !important;
+// }
+
+// .accordion-button:not(.collapsed)::after {
+//     background-image: #{escape-svg($accordion-button-active-icon)} !important;
+// }
+
+.day-title {
+    font-size: 1.4em;
+    width: 100%;
+}
+
+.day-1 {
+    background-color: $yellow;
+    .accordion-button {
+        background-color: $yellow !important;
+    }
+}
+
+.day-2 {
+    background-color: $green;
+    .accordion-button {
+        background-color: $green !important;
+    }
+}
+
+.day-3 {
+    background-color: $red;
+    .accordion-button {
+        background-color: $red;
+    }
+}
+
+.accordion-body {
+    color: $blue;
+    font-size: 2em;
+}
+
+// .accordion-item:first-child {
+//     .accordion-header {
+//         margin-left: 2em;
+//     }
+// }
+
+a:focus {
+    outline: none;
+}
+
+button:focus {
+    outline: none;
+}
+
+h1 {
+    margin-bottom: 2em;
+    text-transform: uppercase;
+    text-decoration: underline;
+}
+
+// .programme-accordion {
+//    width: 100%;
+// }
+
+.about-section {
+    font-size: 2.5rem;
+    color: $gray-800;
+}
+
+.profile-picture {
+    position: relative;
+    top: -40px;
+    left: -50px;
+    background-color: transparent; 
+}
+
+.profile-card {
+    background-color: $yellow;
+    color: black;
+    font-weight: bold;
+}
+
+.speaker-list-entry {
+    background-color: $gray-600;
+}
+
+.back-to-top-link {
+    color: white;
+    font-size: 1.2rem;
+}
+
+.programme-entry {
+    font-size: 0.97rem;
+}

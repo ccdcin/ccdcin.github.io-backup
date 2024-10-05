@@ -1,0 +1,62 @@
+- name: Aditi Rajeev
+  id: aditi
+  pic: aditi.jpg
+  social:
+    twitter: aditi
+    instagram: eternallynauseated
+    link: https://www.aditiportfolio.com/
+  bio: >-
+    Aditi is a film maker and artist who has been working with various artist 
+    groups and collectives, 
+
+    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod     tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At     vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren,     no sea takimata sanctus est Lorem ipsum dolor sit amet.
+    
+
+- name: Arun Kumar
+  id: arun
+  pic: arun.jpg
+  social:
+    twitter: arunk
+    github: arunk
+    instagram: deleuzonal
+  bio: >-
+    Arun is an artist and game designer who was trained in technology.  Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod     tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At     vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren,     no sea takimata sanctus est Lorem ipsum dolor sit amet.
+
+    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod     tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At     vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren,     no sea takimata sanctus est Lorem ipsum dolor sit amet.
+    
+
+- name: Maitri
+  id: maitri
+  pic: maitri.png
+  social:
+    instagram: my3dramatherapy
+  bio: >-
+    This is maitri's bio Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod     tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At     vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren,     no sea takimata sanctus est Lorem ipsum dolor sit amet.
+    
+    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod     tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At     vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren,     no sea takimata sanctus est Lorem ipsum dolor sit amet.
+    
+- name: Paolo Friere
+  id: paolo
+  pic: generic-profile.png
+  bio: >-
+    Paolo was an educator and the author of the book Pedagogy of the Oppressed. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod     tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At     vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren,     no sea takimata sanctus est Lorem ipsum dolor sit amet.
+    
+- name: A Revathi
+  id: revathi
+  pic: generic-profile.png
+  bio: >-
+    Revathi is a staunch ally to trans people all over India, her activism has brought visibility. 
+    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod     tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At     vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren,     no sea takimata sanctus est Lorem ipsum dolor sit amet.
+    
+    
+    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod     tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At     vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren,     no sea takimata sanctus est Lorem ipsum dolor sit amet.
+    
+- name: Namrata
+  id: namrata
+  pic: generic-profile.png
+  bio: >-
+    Namrata is a legal research scholar who has dedicated her life to Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.

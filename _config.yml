@@ -13,24 +13,45 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: Bootstrap 4 Github Pages
-email: ""
+title: Center for Community Dialog and Change - Conference Website
+email: "contact@ccdc.in"
+telephone: "080 23692168"
 description: >- # this means to ignore newlines until "baseurl:"
-  A Bootstrap 4 start up project for Jekyll and Github Pages
+  Website for CCDC's upcoming conference in December 2024
+address: >-
+  A2 204, Shriram Whitehouse Apartments,
+  15th Cross, 6th Main, RT Nagar,
+  Bangalore 560032, Karnataka, India
+
 #baseurl: "" # the subpath of your site, e.g. /blog
 #url: "" # the base hostname & protocol for your site, e.g. http://example.com
 #twitter_username: jekyllrb
 #github_username:  jekyll
 
-repository: "nicolas-van/bootstrap-4-github-pages"
+repository: "ccdcin/ccdcin.github.io"
+
+registration_link: "https://forms.google.com/"
+conference_dates: "13th - 15th December"
+venue: "Indian Social Institute"
+debug: true
+
+header_pages:
+  - about.md
+  - schedule.html
+  - speakers.md
 
 # Build settings
 plugins:
   - jekyll-feed
   - jekyll-sitemap
 
-# A list of the pages to display in the navigation bar
-header_pages:
+sass:
+  sass_dir: _sass
+
+social_links:
+  twitter: https://x.com/
+  instagram: https://www.instagram.com/
+  facebook: https://www.facebook.com/
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list

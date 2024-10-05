@@ -1,20 +1,94 @@
 <!DOCTYPE html>
 <html lang="{{ page.lang | default: site.lang | default: "en" }}">
-
+    <script type="text/javascript">
+        function formatDebugMessage(tag, msg, previousContent) {
+            return `${previousContent}\n${tag}\n${msg}`;
+        }
+        function jekyllDebug(tag, msg) {
+            console.log(tag);
+            const obj = JSON.parse(decodeURIComponent(msg));
+            const prettyPrint = JSON.stringify(obj, null, 4);
+            console.log(obj);
+            if (document.readyState == "complete") {
+                const content = document.getElementById("jekyll-debug").textContent;
+                document.getElementById("jekyll-debug").textContent = formatDebugMessage(tag, prettyPrint, content);
+            } else {
+                window.addEventListener("load", function() {
+                    const content = document.getElementById("jekyll-debug").textContent;
+                    document.getElementById("jekyll-debug").textContent = formatDebugMessage(tag, prettyPrint, content);
+                }, false);
+            }
+        }
+        //https://stackoverflow.com/questions/6676186/use-onchange-in-a-div - code from here
+        document.addEventListener("DOMContentLoaded", function () {
+            const debugEl = document.getElementById('jekyll-debug');
+            const debugToggle = document.getElementById('debug-toggle');
+            function mutationCallback(mutationsList, observer) {
+                //console.log(mutationsList);
+                //console.log(observer);
+                for (const mutation of mutationsList) {
+                    if (mutation.type == 'childList') {
+                        console.log("A child node has been added or removed");
+                        if (debugToggle.classList.contains("hide")) {
+                            debugToggle.classList.toggle("hide"); 
+                        }
+                    } else if (mutation.type == 'attributes') {
+                        console.log(`The attribute ${mutation.attributeName} was changed`);
+                    } else {
+                        console.log(`mutation type: ${mutation.type}`);
+                        console.log(`New value: ${JSON.stringify(mutation.target.data)}`);
+                    }
+                }
+            };
+            const mutationObserver = new MutationObserver(mutationCallback);
+            const mutationConfig = { attributes: true, childList: true, subtree: true, characterData: true };
+            mutationObserver.observe(debugEl, mutationConfig);
+        })
+    </script>
   {%- include head.html -%}
 
-  <body>
+  <body class="bg-gray">
 
     {%- include header.html -%}
 
     <div class="py-5">
-      <div class="container page-content">
+      <div class="container-fluid page-content">
           {{ content }}
       </div>
     </div>
 
     {%- include footer.html -%}
-
+    <div id="debug-console" class="modal">
+        <div class="modal-dialog modal-fullscreen">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="modal-title fs-5">Debug Panel</h3>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <pre id="jekyll-debug">
+                    </pre>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+        (function() {
+            const logo = document.getElementById("logo-nav");
+            const register = document.getElementById("register-nav");
+            window.addEventListener('scroll', (evt) => {
+                const scroll = document.documentElement.scrollTop || document.body.scrollTop;
+                console.log(scroll);
+                if (scroll > 900) {
+                    logo.classList.remove("d-none");
+                    register.classList.remove("d-none");
+                } else {
+                    logo.classList.add("d-none");
+                    register.classList.add("d-none");
+                }
+            });
+        })();
+    </script>
   </body>
 
 </html>

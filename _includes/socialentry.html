@@ -1,0 +1,9 @@
+<li>
+    {% if include.social == 'link' %}
+    <i class="fa-solid fa-link"></i>
+    <a href="{{ include.account }}">{{ include.account }}</a>
+    {% else %}
+    <i class="fa-brands fa-{{ include.social }}"></i>
+    <a href="{{ site.social_links[include.social] }}/{{ include.account }}">{{ include.account }}</a>
+    {% endif %}
+</li>

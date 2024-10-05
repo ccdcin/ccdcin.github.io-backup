@@ -1,0 +1,60 @@
+---
+layout: page
+title: Speakers
+permalink: speakers/
+---
+
+<h1 id="speakers-grid">Grid View of Speakers</h1>
+<div class="container-fluid speaker-grid">
+{%- for speaker in site.data.speakers %}
+{% assign mod = forloop.index | modulo: 3 %}
+{% if mod == 1 %}
+<div class="row ms-2 ps-5 d-flex-row justify-content-between pe-2">
+{% endif %}
+
+{% include speaker.html speaker=speaker mod=mod %}
+
+{% if mod == 0 %}
+</div>
+{% endif %}
+{%- endfor %}
+</div>
+<!-- .speaker-grid -->
+<!-- speaker-list -->
+
+<h1 id="speakers-list">Speakers List</h1>
+<div class="container-fluid speaker-list">
+{%- for speaker in site.data.speakers %}
+<div class="row px-3 speaker-list-entry my-4">
+    <div class="offset-md-1 col-md-3">
+        <div class="card profile-picture-list">
+            <img class="img-thumbnail rounded-circle" src="{{ '/assets/img/speakers/' | append: speaker.pic | relative_url }}">
+            {% if speaker.social.size > 0 %}
+            <ul>
+                {% for h in speaker.social %}
+                    {% assign soc = h[0] %}
+                    {% assign acc = h[1] %}
+                    {% include socialentry.html social=soc account=acc %}
+                {% endfor %}
+            </ul>
+            {% endif %}
+        </div> 
+        
+    </div>
+    <div class="col-md-7">
+        <div class="d-flex justify-content-between">
+            <h2 id="speaker-list-{{ speaker.id}}" class="d-flex">{{ speaker.name }}</h2>
+            <a class="d-flex-column back-to-top-link" href="#speakers-grid">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="currentColor" class="mx-4 bi bi-arrow-up-square-fill" viewBox="0 0 16 16">
+                      <path d="M2 16a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2zm6.5-4.5V5.707l2.146 2.147a.5.5 0 0 0 .708-.708l-3-3a.5.5 0 0 0-.708 0l-3 3a.5.5 0 1 0 .708.708L7.5 5.707V11.5a.5.5 0 0 0 1 0"/>
+                    </svg>
+                    <p>Back to the top</p>
+            </a>
+        </div>
+        <div>
+            {{ speaker.bio }}
+        </div>
+     </div>
+</div>
+{% endfor %}
+</div>

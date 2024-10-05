@@ -1,0 +1,35 @@
+---
+layout: page
+title: Schedule
+permalink: schedule/
+---
+{% assign table_headers = "Title,Timings,Speakers,Description" | split: "," %}
+{% assign event_groups = site.data.schedule | group_by: 'day' %}
+{%- for group in event_groups %}
+<h3 id="day{{group.name}}">Day {{ group.name }}</h3>
+<table class="table table-dark table-striped table-bordered">
+    <thead>
+        <tr>
+            {% for header in table_headers %}
+            <th scope="col">{{ header }}</th>
+            {% endfor %}
+        </tr>
+    </thead>
+    <tbody class="table-group-divider">
+    {% for event in group.items  %}
+    <tr>
+        <td>{{ event.title }}</td>
+        <td>{{ event.timings }}</td>
+        <td>
+            {% for speaker in event.speakers %}
+                    <script>jekyllDebug("speaker:", "{{ speaker | jsonify | uri_escape }}")</script>
+                {% assign speakerObj = site.data.speakers | where: "id", speaker | first %}
+                <a href="{{ '/speakers/#' | append: speaker | relative_url }}">{{speakerObj.name}}</a>
+            {% endfor %}
+        </td>
+        <td>{{ event.description }}</td>
+    </tr>
+    {% endfor %}
+    </tbody>
+</table>
+{% endfor %}
