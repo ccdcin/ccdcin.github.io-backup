@@ -11,8 +11,6 @@
 
     - title: Lunch
       timings: 1pm - 2pm
-      speakers:      
-      description: >-
         
     - title: Introduction to TO
       timings: 2pm - 4pm
@@ -23,8 +21,6 @@
 
    - title: Coffee Break
       timings: 4pm - 4:30pm
-      speakers:      
-      description: >-
       
     - title: Performance&#58; Naan Oru Pen
       timings: 6pm - 7pm
@@ -35,8 +31,6 @@
 
     - title: Dinner
       timings: 7:30pm - 8:30pm
-      speakers:      
-      description: >-
       
 - id: 2
   date: December 14th
@@ -60,9 +54,6 @@
 
     - title: Break
       timings: 10:30am - 11:00am
-      speakers:
-      description: >-
-        
 
     - title: Panel&#58; Radical Play&#58; TO with Children and Young People
       timings: 11:00am - 1:00pm
@@ -80,8 +71,6 @@
         
     - title: Lunch
       timings: 1:00pm - 2:00pm
-      speakers:
-      description: >-
 
     - title: Panel&#58; Performing Gender
       timings: 2:00pm - 4:00pm
@@ -97,8 +86,6 @@
 
     - title: Break
       timings: 4:00pm - 4:30pm
-      speakers:
-      description: >-
 
     - title: Panel&#58; Performing Gender
       timings: 4:30pm - 5:30pm
@@ -114,8 +101,6 @@
 
     - title: Break
       timings: 5:30pm - 6:00pm
-      speakers:
-      description: >-
       
     - title: wepushthesky
       timings: 6:00pm - 7:30pm
@@ -127,8 +112,6 @@
         
     - title: Dinner
       timings: 7:30pm - 8:30pm
-      speakers:
-      description: >-
       
 - id: 3
   date: December 15th
@@ -152,8 +135,6 @@
   
     - title: Break
       timings: 10:30am - 11:00am
-      speakers:
-      description: >-
         
 
     - title: Panel&#58; The Practice of Healing&#58; The Arts and Humanities in Health
@@ -173,8 +154,6 @@
         
     - title: Lunch
       timings: 1:00pm - 2:00pm
-      speakers:
-      description: >-
 
     - title: Panel&#58; Jokering Change&#58; TO for Our Times
       timings: 2:00pm - 4:00pm
@@ -191,9 +170,7 @@
 
     - title: Break
       timings: 4:00pm - 4:30pm
-      speakers:
-      description: >-
-
+      
   - title: Panel&#58; Jokering Change&#58; TO for Our Times
       timings: 4:30pm - 5:30pm
       speakers:
@@ -209,9 +186,7 @@
 
     - title: Break
       timings: 5:30pm - 6:30pm
-      speakers:
-      description: >-
-      
+     
     - title: Soliga performance
       timings: 6:00pm - 7:30pm
       speakers:
@@ -222,5 +197,4 @@
         
     - title: Dinner
       timings: 7:30pm - 8:30pm
-      speakers:
-      description: >-
+
