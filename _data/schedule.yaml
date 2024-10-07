@@ -2,7 +2,7 @@
   date: December 13th
   title: Pre-conference Workshops
   events:
-    - title: Let’s Play: An Introduction to TO
+    - title: Let’s Play&#58; An Introduction to TO
       timings: 10am - 1pm
       speakers:
         - ashima
@@ -26,7 +26,7 @@
       speakers:      
       description: >-
       
-    - title: Performance: Naan Oru Pen
+    - title: Performance&#58; Naan Oru Pen
       timings: 6pm - 7pm
       speakers:
         - sowmya
@@ -64,7 +64,7 @@
       description: >-
         
 
-    - title: Panel: Radical Play: TO with Children and Young People
+    - title: Panel&#58; Radical Play&#58; TO with Children and Young People
       timings: 11:00am - 1:00pm
       speakers:
         - timira
@@ -83,7 +83,7 @@
       speakers:
       description: >-
 
-    - title: Panel: Performing Gender
+    - title: Panel&#58; Performing Gender
       timings: 2:00pm - 4:00pm
       speakers:
         - revathi
@@ -100,7 +100,7 @@
       speakers:
       description: >-
 
-    - title: Panel: Performing Gender
+    - title: Panel&#58; Performing Gender
       timings: 4:30pm - 5:30pm
       speakers:
         - revathi
@@ -134,7 +134,7 @@
   date: December 15th
   title: Conference Day 2
   events:
-       - title: Panel: The Practice of Healing: The Arts and Humanities in Health
+    - title: Panel&#58; The Practice of Healing&#58; The Arts and Humanities in Health
       timings: 9:30am - 10:30am
       speakers:
         - navjeevan
@@ -156,7 +156,7 @@
       description: >-
         
 
-    - title: Panel: The Practice of Healing: The Arts and Humanities in Health
+    - title: Panel&#58; The Practice of Healing&#58; The Arts and Humanities in Health
       timings: 11:00am - 1:00pm
       speakers:
         - navjeevan
@@ -176,7 +176,7 @@
       speakers:
       description: >-
 
-    - title: Panel: Jokering Change: TO for Our Times
+    - title: Panel&#58; Jokering Change&#58; TO for Our Times
       timings: 2:00pm - 4:00pm
       speakers:
         - timira
@@ -194,7 +194,7 @@
       speakers:
       description: >-
 
-  - title: Panel: Jokering Change: TO for Our Times
+  - title: Panel&#58; Jokering Change&#58; TO for Our Times
       timings: 4:30pm - 5:30pm
       speakers:
         - timira
