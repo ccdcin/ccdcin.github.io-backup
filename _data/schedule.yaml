@@ -1,6 +1,6 @@
 - id: 1
   date: December 13th
-  title: Pre&#8209;conference Workshops
+  title: Pre-conference Workshops
   events:
     - title: Let’s Play&#58; An Introduction to TO
       timings: 10am - 1pm
@@ -171,7 +171,7 @@
     - title: Break
       timings: 4:00pm - 4:30pm
       
-  - title: Panel&#58; Jokering Change&#58; TO for Our Times
+    - title: Panel&#58; Jokering Change&#58; TO for Our Times
       timings: 4:30pm - 5:30pm
       speakers:
         - timira
