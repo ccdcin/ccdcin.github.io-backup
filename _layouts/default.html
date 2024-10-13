@@ -76,17 +76,22 @@
         (function() {
             const logo = document.getElementById("logo-nav");
             const register = document.getElementById("register-nav");
-            window.addEventListener('scroll', (evt) => {
-                const scroll = document.documentElement.scrollTop || document.body.scrollTop;
-                console.log(scroll);
-                if (scroll > 900) {
-                    logo.classList.remove("d-none");
-                    register.classList.remove("d-none");
-                } else {
-                    logo.classList.add("d-none");
-                    register.classList.add("d-none");
-                }
-            });
+            if (document.location.pathname == '/speakers/') {
+                logo.classList.remove("d-none");
+                register.classList.remove("d-none");
+            } else {
+                window.addEventListener('scroll', (evt) => {
+                    const scroll = document.documentElement.scrollTop || document.body.scrollTop;
+                    console.log(scroll);
+                    if (scroll > 830) {
+                        logo.classList.remove("d-none");
+                        register.classList.remove("d-none");
+                    } else {
+                        logo.classList.add("d-none");
+                        register.classList.add("d-none");
+                    }
+                });
+            }
         })();
     </script>
   </body>
