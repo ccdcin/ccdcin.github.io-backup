@@ -237,7 +237,7 @@ h1 {
 // }
 
 .about-section {
-    font-size: 2.5rem;
+    font-size: 1.7rem;
     color: $gray-800;
 }
 
@@ -264,5 +264,23 @@ h1 {
 }
 
 .programme-entry {
-    font-size: 0.97rem;
+    font-size: 1.1rem;
+}
+
+//Programme display event entries
+.event-timings {
+    flex: 1 1 auto;
+}
+
+.event-title {
+    flex: 1 1 auto;
+}
+
+.event-speakers {
+    flex: 1 1 auto;
+}
+
+.event-description {
+    flex: 1.5 1 auto;
+    width: 35%;
 }

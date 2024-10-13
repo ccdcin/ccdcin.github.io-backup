@@ -19,9 +19,9 @@
             <div class="programme-entry accordion-body d-flex flex-column justify-content-between align-items-center">
                 {%- for event in day.events %}
                 <div class="d-flex container flex-column flex-md-row justify-content-between align-items-between">
-                    <div class="p-2">{{event.timings}}</div>
-                    <div class="p-2">{{event.title}}</div>
-                    <div class="p-2">
+                    <div class="p-2 event-timings">{{event.timings}}</div>
+                    <div class="p-2 event-title">{{event.title}}</div>
+                    <div class="p-2 event-speakers">
                         {% if event.speakers %}
                         <ul>
                         {% for speaker in event.speakers %}
@@ -31,7 +31,7 @@
                         </ul>
                         {% endif %}
                     </div>
-                    <div class="p-2">{{event.description}}</div>
+                    <div class="p-2 event-description">{{event.description}}</div>
                 </div>
                 {% endfor %}
             </div>
